@@ -6,6 +6,7 @@
 import "./content.css";
 import { menu_list, food_list } from "../../assets/images/assets";
 import { useState } from "react";
+import { assets } from "../../assets/images/assets";
 
 const Content = () => {
   const [cate, setCate] = useState("all");
@@ -71,7 +72,7 @@ const Content = () => {
     }
   });
   return (
-    <div className="content container ">
+    <div className="content container " id="content">
       <div className="landing-image">
         <div className="text">
           <h1>
@@ -84,11 +85,14 @@ const Content = () => {
             mission is to satesfy your crafings and elevates ,your dinning
             experience.
           </p>
-          <button>view mune</button>
+          <button>
+            {" "}
+            <a href="#menu">view mune </a>
+          </button>
         </div>
       </div>
 
-      <div className="explore-menu">
+      <div className="explore-menu" id="menu">
         <div className="categories">
           <div className="info">
             <h2>Explore our menu</h2>
@@ -103,6 +107,20 @@ const Content = () => {
         <div className="cart-content">
           <h3>Top dishes near you </h3>
           <div className="dishes">{dishes}</div>
+        </div>
+      </div>
+
+      <div className="tomato-app" id="mob">
+        <div className="cont">
+          <div className="p">For Better Experience Download tomato app </div>
+          <div className="links">
+            <div className="immage">
+              <img src={assets.app_store} alt="App Stor" />
+            </div>
+            <div className="immage">
+              <img src={assets.play_store} alt="Play Stor" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

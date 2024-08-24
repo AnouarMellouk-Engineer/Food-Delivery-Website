@@ -2,6 +2,12 @@
   width: 100%;
 
   padding: 1em 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 99;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.055);
 }
 
 .nav .container {

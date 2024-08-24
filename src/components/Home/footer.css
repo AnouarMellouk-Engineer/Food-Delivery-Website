@@ -1,0 +1,92 @@
+.footer {
+  width: 100%;
+  background-color: black;
+  padding: 2.5em 0;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  min-width: 777px;
+}
+
+.first,
+.second,
+.third {
+  color: white;
+}
+
+.first .logoo {
+  width: 40%;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+.first .logoo img {
+  width: 100%;
+}
+
+.first p {
+  margin-bottom: 1.5em;
+}
+
+.first .social-links {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.second,
+.third {
+  text-align: center;
+}
+
+.second p {
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.second p:first-child,
+.third p:first-child {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.third p {
+  margin-bottom: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.third p:first-child {
+  margin-bottom: 2em;
+}
+
+.second p:not(:first-child):hover,
+.third p:not(:first-child):hover {
+  color: orange;
+}
+
+@media (max-width: 808px) {
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+
+    min-width: 0;
+  }
+
+  .second,
+  .third {
+    text-align: start;
+  }
+}
+
+@media (max-width: 442px) {
+  .footer .container {
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 0;
+  }
+}
